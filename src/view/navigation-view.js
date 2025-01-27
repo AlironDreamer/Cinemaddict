@@ -1,5 +1,5 @@
 import AbstractView from '../framework/view/abstract-view.js';
-import {Categories, SortType} from '../const.js';
+import {Categories} from '../const.js';
 
 const createNavigationItemTemplate = ({type, name, count}, currentCategoryType) => {
   const getCategoryName = (categoryName) =>
@@ -55,7 +55,6 @@ export default class NavigationView extends AbstractView {
 
   #categoryTypeChangeHandler = (evt) => {
     evt.preventDefault();
-    console.log(evt.target.dataset.categoryType);
     this._callback.categoryTypeChange(evt.target.dataset.categoryType);
   };
 }

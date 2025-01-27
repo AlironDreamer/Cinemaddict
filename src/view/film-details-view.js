@@ -53,8 +53,6 @@ const createFilmDetailsTemplate = (state, hasLoadingError) => {
 };
 
 export default class FilmDetailsView extends AbstractStatefulView {
-  // #film = null;
-  // #comments = null;
   #updateData = null;
   #hasLoadingError = null;
 
@@ -68,9 +66,6 @@ export default class FilmDetailsView extends AbstractStatefulView {
     this.#updateData = updateData;
     this.#hasLoadingError = hasLoadingError;
     this.#setInnerHandlers();
-
-    // this.#film = film;
-    // this.#comments = comments;
   }
 
   get template() {
@@ -157,11 +152,6 @@ export default class FilmDetailsView extends AbstractStatefulView {
     this.element.querySelector('.film-details__control-button--favorite').addEventListener('click', this.#favoriteHandler);
   };
 
-  // setAddCommentClickHandler = (callback) => {
-  //   this._callback.addCommentClick = callback;
-  //   document.addEventListener('keydown', this.#uploadFormHandler);
-  // };
-
   setDeleteClickHandler = (callback) => {
     this._callback.deleteClick = callback;
     if (this.element.querySelector('.film-details__comment-delete')) {
@@ -171,9 +161,6 @@ export default class FilmDetailsView extends AbstractStatefulView {
         });
     }
   };
-  // removeClosePopupHandler = () => {
-  //   this.element.querySelector('.film-details__close-btn').removeEventListener('click', this.#closePopupHandler);
-  // };
 
   #emojiChoiceHandler = (evt) => {
     evt.preventDefault();

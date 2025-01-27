@@ -1,4 +1,4 @@
-import {formatDateToDMY, formatDateToHM} from "../utils/format.js";
+import {formatDateToDMY, formatDateToHM} from '../utils/format.js';
 
 export const createFilmDetailsInfoTemplate = ({filmInfo}) => {
   const {
@@ -62,8 +62,6 @@ export const createFilmDetailsInfoTemplate = ({filmInfo}) => {
               <td class="film-details__term">${genreTitle}</td>
               <td class="film-details__cell">
               ${genreMarkup}
-<!--                <span class="film-details__genre">Film-Noir</span>-->
-<!--                <span class="film-details__genre">Mystery</span>-->
               </td>
             </tr>
           </table>
