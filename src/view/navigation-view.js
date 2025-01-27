@@ -55,6 +55,7 @@ export default class NavigationView extends AbstractView {
 
   #categoryTypeChangeHandler = (evt) => {
     evt.preventDefault();
-    this._callback.categoryTypeChange(evt.target.dataset.categoryType);
+    const linkElement = evt.target.closest('a');
+    this._callback.categoryTypeChange(linkElement.dataset.categoryType);
   };
 }
